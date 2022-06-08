@@ -49,6 +49,16 @@ const App = () => {
         style={{ width: 500, height: 500 }}
       >
         <AgGridReact
+          ref={gridRef} // Ref for accessing Grid's API
+
+          rowData={rowData} // Row Data for Rows
+
+          columnDefs={columnDefs} // Column Defs for Columns
+
+          animateRows={true} // Optional - set to 'true' to have rows animate when sorted
+          rowSelection='multiple' // Options - allows click selection of rows
+
+          onCellClicked={cellClickedListener} // Optional - registering for Grid Event
         />
       </div>
 
