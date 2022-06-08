@@ -21,4 +21,16 @@ const App = () => {
   const DefaultColDef = useMemo(() => ({
     sortable: true
   }));
+
+  // Example of consuming Grid Event
+  const cellClickedListener = useCallback((event) => {
+    console.log('cellClicked', event);
+  }, []);
+
+  // Example of load data from server
+  useEffect(() => {
+    fetch('https://www.ag-grid.com/example-assets/row-data.json')
+      .then((res) => res.json())
+      .then((rowData) => setRowData(rowData))
+  }, [])
 }
