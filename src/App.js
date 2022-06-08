@@ -32,5 +32,10 @@ const App = () => {
     fetch('https://www.ag-grid.com/example-assets/row-data.json')
       .then((res) => res.json())
       .then((rowData) => setRowData(rowData))
-  }, [])
+  }, []);
+
+  // Example using Grid's API
+  const buttonListener = useCallback((e) => {
+    gridRef.current.api.deselectAll();
+  }, []);
 }
