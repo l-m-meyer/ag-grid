@@ -16,4 +16,9 @@ const App = () => {
     { field: 'model', filter: true },
     { field: 'price' }
   ]);
+
+  // DefaultColDef sets props common to all Columns
+  const DefaultColDef = useMemo(() => ({
+    sortable: true
+  }));
 }
