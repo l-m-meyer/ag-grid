@@ -46,7 +46,7 @@ const App = () => {
       {/* On div wrapping Grid a) specify theme CSS Class and b) sets Grid size */}
       <div
         className='ag-theme-alpine'
-        style={{ width: 500, height: 500 }}
+        style={{ width: 620, height: 500 }}
       >
         <AgGridReact
           ref={gridRef} // Ref for accessing Grid's API
