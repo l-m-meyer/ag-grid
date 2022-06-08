@@ -38,4 +38,8 @@ const App = () => {
   const buttonListener = useCallback((e) => {
     gridRef.current.api.deselectAll();
   }, []);
+
+  return (
+    <button onClick={buttonListener}>Push Me</button>
+  );
 }
